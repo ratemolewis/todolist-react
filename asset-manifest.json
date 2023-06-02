@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/todolis-react/static/js/main.6b7fc45e.js",
-    "index.html": "/todolis-react/index.html",
-    "main.6b7fc45e.js.map": "/todolis-react/static/js/main.6b7fc45e.js.map"
+    "main.js": "/todolist-react/static/js/main.6b7fc45e.js",
+    "index.html": "/todolist-react/index.html",
+    "main.6b7fc45e.js.map": "/todolist-react/static/js/main.6b7fc45e.js.map"
   },
   "entrypoints": [
     "static/js/main.6b7fc45e.js"
