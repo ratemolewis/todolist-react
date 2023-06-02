@@ -1,4 +1,5 @@
 {
+  "homepage":"https://ratemolewis.github.io/todolis-react",
   "name": "es6-spread-operator-practice",
   "version": "1.0.0",
   "description": "",
@@ -15,6 +16,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
