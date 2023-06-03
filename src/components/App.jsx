@@ -1,20 +1,18 @@
 import React, { useState } from "react";
 import Input from "./Input";
-
+import InputArea from "./InputArea";
 
 function App() {
-  const [input, setInput] = useState("");
+  
   const [items, setItems] = useState([]);
-  function handleChange(event) {
-    setInput(event.target.value);
-  }
+  
 
-  function handleClick() {
+  function handleClick(input) {
     setItems((prevItems) => {
       //use the spread operator
       return [...prevItems, input];
     });
-    setInput("");
+    
   }
 
   function deleteItem(id){
@@ -30,12 +28,11 @@ function App() {
       <div className="heading">
         <h1>To-Do List</h1>
       </div>
-      <div className="form">
-        <input onChange={handleChange} value={input} type="text" />
-        <button onClick={handleClick}>
-          <span>Add</span>
-        </button>
-      </div>
+     
+        <InputArea 
+          onAdd={handleClick}
+        />
+      
       <div>
         <ul>
           {items.map((todoItem, index) => (

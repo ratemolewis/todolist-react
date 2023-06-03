@@ -1,11 +1,7 @@
 import react, { useState } from "react";
 
 function Input(props){
-    
-
-   
-
-    return (
+     return (
     <div onClick={()=>{
         props.onChecked(props.id)
     }}>
