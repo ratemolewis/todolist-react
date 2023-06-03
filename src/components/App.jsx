@@ -17,6 +17,14 @@ function App() {
     setInput("");
   }
 
+  function deleteItem(id){
+  setItems((preValues)=>{
+   return preValues.filter((item, index)=>{
+    return id !== index;
+   })
+  })
+  }
+
   return (
     <div className="container">
       <div className="heading">
@@ -30,8 +38,14 @@ function App() {
       </div>
       <div>
         <ul>
-          {items.map((todoItem) => (
-            <Input todoItem={todoItem}/>
+          {items.map((todoItem, index) => (
+            //NB: when we map trough array to create components we must have the key
+            <Input
+            key={index}
+            id={index}
+             todoItem={todoItem}
+              onChecked={deleteItem}
+             />
             
           ))}
         </ul>
