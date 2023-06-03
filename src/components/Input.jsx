@@ -5,11 +5,7 @@ function Input(props){
 
     function handleClick(event){
         setIsClick((prevValue)=>{
-            if(prevValue===true){
-                return false;
-            }else if(prevValue === false){
-                return true;
-            }
+            return !prevValue;
         });
     }
 
